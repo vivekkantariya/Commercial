@@ -1,0 +1,226 @@
+{% extends "base.html" %}
+{% block title %}salary based on attendance{% endblock title %}
+{% block body %}
+
+{% load static %}
+
+
+<head>
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Style the body */
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+  
+  /* Header/logo Title */
+  .header {
+    padding: 80px;
+    text-align: center;
+    background: #6ca6e7;
+    color: white;
+  }
+  
+  /* Increase the font size of the heading */
+  .header h1 {
+    font-size: 40px;
+  }
+  
+  /* Style the top navigation bar */
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* Style the navigation bar links */
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  
+  /* Right-aligned link */
+  .navbar a.right {
+    float: right;
+  }
+  
+  /* Change color on hover */
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Column container */
+  .row {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+  }
+  
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
+  .side {
+    -ms-flex: 30%; /* IE10 */
+    flex: 10%;
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+  /* Main column */
+  .main {   
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+  }
+  
+  /* Fake image, just for this example */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .card-img-top{
+    width: 95%;
+  }
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+  }
+  
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 700px) {
+    .row {
+      flex-direction: column;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .navbar a {
+      float: none;
+      width: 100%;
+    }
+  }
+  </style>
+  </head>
+  <body>
+  <div class="header">
+    <h1 style="font-family: Helvetica; font-size: 60px;">salary based on attendance</h1>
+    <!-- <p style="font-family: Monospace;">A website created by me.</p> -->
+  </div>
+  
+  
+  <div class="row">
+    <div class="side">
+      <div class="text-center">
+      <!-- <h2>View Employee</h2>
+        <h5>Photo of me:</h5> -->
+  
+        <img class="card-img-top text-center" src="{% static 'C:\Users\91940\Desktop\Application\static\sslogo.jpg' %}" alt="Profile Image">
+  
+        <h3>Some Other Feature</h3>
+  <br>
+  
+        <a href="/click-photos" class="btn btn-primary mt-3">
+            Click me to open a new page
+        </a>
+  
+        <br><br>
+  
+        <a href="/click-photos" class="btn btn-primary mt-3">
+          Click me to open a new page
+      </a>
+  
+      <br><br>
+  
+        <a href="/video-record" class="btn btn-primary">
+            Click me to open a new page
+        </a>
+    </div>
+    </div>
+  
+  
+    <div class="main">
+      <h2>leave management</h2>
+      <!-- <h5>Title description, Dec 7, 2017</h5> -->
+      <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\Admin_leave_Requesting.png' %}" alt="Profile Image">
+  
+      <!-- <div class="fakeimg" style="height:200px;">Image</div> -->
+      <h3 style="font-family: Verdana;">The "Salary Based on Attendance" feature in the employee management system stands as a cornerstone for fair and efficient compensation practices. This functionality not only streamlines the process of attendance data input by employees but also incorporates dynamic calculation logic, allowing organizations to tailor the salary computation to their specific policies and structures. The daily salary calculation considers factors such as roles, positions, and additional allowances, ensuring a comprehensive and accurate reflection of an employee's contribution. Furthermore, the system's real-time result display empowers employees with instant visibility into their calculated salaries, fostering a sense of transparency and trust. The feature's scalability, coupled with its integration capabilities with the payroll system, positions it as a strategic tool that grows with the organization, adapting seamlessly to changes in workforce dynamics and policies. With an emphasis on compliance, security, and historical data tracking, this feature not only enhances the efficiency of salary management but also contributes to the overall effectiveness of the employee management system.
+        </h3>
+      <br>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <h3 style="font-family: Verdana;">Overhauling your time and project management</h3>
+  </div>
+  
+  
+  
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+    }
+    
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: red;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
+    
+    #myBtn:hover {
+      background-color: #555;
+    }
+    </style>
+    </head>
+    <body>
+  
+  
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script>
+    let mybutton = document.getElementById("myBtn");
+  
+    window.onscroll = function() {scrollFunction()};
+  
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+  
+  </body>
+  
+  {% endblock body %}
+  

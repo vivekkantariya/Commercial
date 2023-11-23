@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %}freedemo{% endblock title %}
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System Demo</title>
+    <style>
+        /* body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        } */
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Management System Demo</h1>
+        <h3>Welcome to our Employee Management System demo. Explore the features and functionalities of our system by clicking the button below.</h3>
+        <button onclick="tryNow()">Try Now</button>
+    </div>
+
+    <script>
+        function tryNow() {
+            window.location.href = "{% url 'bookfree' %}";
+        }
+    </script>
+</body>
+</html>
+
+
+{% endblock body %}
