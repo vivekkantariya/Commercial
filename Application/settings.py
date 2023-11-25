@@ -72,14 +72,12 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Application.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'hackathon',
-        'USER': 'unknown',
+        'USER': 'root',
         'PASSWORD': 'password',
         'HOST': 'localhost',  
         'PORT': '3306',  

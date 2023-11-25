@@ -54,6 +54,7 @@ def bookfree(request):
         else:
             return render(request, 'bookfree.html', {'error': 'Start'})
     except Exception as e:
+        print(e)
         return render(request, 'bookfree.html', {'error': 'You are already registered. Please login.'})
 def trynow(request):
     if request.method == 'POST':
